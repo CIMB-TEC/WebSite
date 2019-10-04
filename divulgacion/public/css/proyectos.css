@@ -1,0 +1,197 @@
+#proyectos {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.col-7{
+  width: 100%;
+  height: 160px;
+  display: block;
+  -webkit-transition: height 500ms linear;
+  -ms-transition: height 500ms linear;
+  transition: height 500ms linear;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.col-3 {
+  width: 100%;
+  height: 40px;
+    margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.col-7:hover{
+  cursor: pointer;
+}
+
+#ADMAS .col-7{
+  background-image: url(http://cimb.com.mx/img/proyectos/main/ADMAS.jpg);
+}
+#DOMO .col-7{
+  background-image: url(http://cimb.com.mx/img/proyectos/main/domo.jpg);
+}
+#ICARUS .col-7{
+  background-image: url(http://cimb.com.mx/img/proyectos/main/ICARUS.jpg);
+}
+#EXP .col-7{
+  background-image: url(http://cimb.com.mx/img/proyectos/main/exp.jpg);
+}
+#AGR .col-7{
+  background-image: url(http://cimb.com.mx/img/proyectos/main/agr.jpg);
+}
+#VEH .col-7{
+  background-image: url(http://cimb.com.mx/img/proyectos/main/fondoplataformaInteligente.jpg);
+}
+
+
+.title {
+  text-transform: capitalize;
+  text-shadow: 1px 1px #000000;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  font-weight: 300;
+  position: absolute;
+  line-height: 2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.subtitle {
+  font-weight: 700;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+.fader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+
+
+.periodo-wrapper{
+    width: 100vw;
+    max-width: 960px;
+    height: 50px;
+    background-color:whitesmoke;
+    padding-left: 20px;
+}
+
+.proyectos-wrapper .container{
+    max-width: 960px;
+}
+
+.periodo{
+    font-size: 16px;
+    width: 90%;
+    height: 50px;
+    background-color:rgba(0,0,0,0);
+    color: black;
+    border: 0;
+    text-decoration: underline; 
+    font-family: "Montserrat", sans-serif;
+ 
+}
+.info {
+  display: none;
+  padding: 2rem;
+  color: #4a4a4a;
+  text-align: justify;
+}
+
+.info p {
+  margin-bottom: 1rem;
+}
+
+.extra-menu{
+    height: 60px;
+    width: 100vw;
+    max-width: 960px;
+    background-color:darkred;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: -35px;
+    margin-left: -32px;
+    border: 0px;
+}
+
+.extra-menu p{
+    color: white;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: underline; 
+    margin-bottom: 0 !important ;
+    font-weight: 900;    
+}
+.proyectos-wrapper .container{
+    position: relative;
+}
+
+.proyectos-wrapper .col-7{
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,0);
+    z-index:10;
+
+}
+.proyecto-slider{
+    position:absolute;
+}
+
+.proyecto-slider .slick-slide div{
+    display: block;
+    height: 160px;
+    max-width: 960px
+    -webkit-transition: height 500ms linear;
+    -ms-transition: height 500ms linear;
+    transition: height 500ms linear;
+}
+
+.proyecto-slider div img{
+    margin-top: -150px;
+    object-fit: cover;
+    max-width: 960px;  
+    width: 100%;
+}
+
+.especial{
+    overflow: hidden;
+    height: 160px;
+}
+
+.proyectos-wrapper{
+    display: none;
+}
+
+.desc ul{
+     list-style-type:inherit;
+    margin-left: 20px;
+}
+
+#ADMAS-ene16,#DOMO-ene16,#ICARUS-ene18{
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 1.4rem;
+      line-height: 1.4rem;
+    margin-left: 0.5rem;
+  }
+.proyecto-slider div img{
+    margin-left: -75px;
+    min-width: 800px;
+   }
+
+    
+}

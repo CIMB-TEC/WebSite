@@ -1,0 +1,135 @@
+.active {
+  display: block !important;
+}
+
+.colaborador-wrapper {
+  justify-content: space-around;
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.colaborador-wrapper p {
+  margin: 0;
+}
+
+.colaborador-tarjeta {
+  border-top: 4px solid #122c47;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  max-width: 320px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.colaborador-imagen {
+  width: 100%;
+}
+
+.colaborador-imagen img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.colaborador-detalles {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+}
+
+.colaborador-nombre {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8625rem !important;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.colaborador-rol {
+  font-weight: 300;
+  font-size: 0.8625rem !important;
+}
+
+.colaborador-separacion {
+  margin-top: 1rem;
+}
+
+.desktop.colaborador-biografia {
+  border-top: 4px solid #122c47;
+  padding: 2rem;
+  flex-grow: 0;
+  margin-left: 1rem !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.mobile.colaborador-biografia {
+  margin-top: 2rem;
+}
+
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+.mobile.show-more-wrapper {
+  display: none;
+}
+
+.colaborador-contacto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 0.8625rem !important;
+  text-transform: uppercase;
+}
+
+.colaborador-contacto > * {
+  flex: 0 0 auto;
+}
+
+.colaborador-contacto-titulo {
+  margin: 0 !important;
+}
+
+.colaborador-contacto-enlaces {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+.colaborador-contacto-enlaces img {
+  margin: 0 4px 0 4px;
+}
+
+.show-more-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0 1rem 0;
+}
+
+.show-more-button {
+  font-weight: 300;
+  font-size: 0.8625rem !important;
+  display: flex;
+  align-items: center;
+}
+
+.show-more-button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile.show-more-wrapper {
+    display: flex !important;
+  }
+}
