@@ -1,10 +1,7 @@
 ﻿= CIMB 
 https://www.cimb.com.mx
 
-
-
 = Contributing
-
 
 IMPORTANT: Use terminal git, not the bloated GUI version. 
 
@@ -39,28 +36,55 @@ Clone
 ----
 git clone https://github.com/CIMB-TEC/WebSite.git
 cd Website
+git fetch origin
+git checkout -b dev origin/dev
 ----
 
-Create new feature branch, the name should be the issue number in the format "GH-{ISSUENUMBER}". If multiple issues are solved on the same branch, separate them with a comma.
+Create new feature branch, the name should be the issue number in the format. 
+
+    yourname/feature/issue-tracker-number/short-description
+
+which would translate to:
+
+    Mauville/github/GH-20/readme-init
 
 [source, powershell]
 ----
-git checkout -b GH-{ISSUENUMBER}
-git remote add personal https://github.com/USERNAME/WebSite.git
+git checkout -b Mauville/github/GH-20/readme-init
 ----
 
 Begin making changes.  Once finished, add, commit and push changes.
 
 IMPORTANT: The commit message (the string between the quotes) should follow this format:
-[GH-{ISSUE NUMBER}] - {Changes} ] 
+GH-{ISSUENUMBER} - {Changes}
+
+If the commit solves the issue, add "Solve" before the GH-Issue
 
 [source, powershell]
 ----
 git add *
 git commit -m '{COMMIT MESSAGE}'
 # Be sure to replace with your username
-git push --set-upstream personal dev
 ----
 
-Create pull request
+Push & create pull request
+NOTE: You can get the branch name using `git branch`
+[source, powershell]
+----
+git push --set-upstream origin <branch name>
+hub pull-request -m "Solves #{issue-number} {and Solves {issue-number}}" -m "{Description of changes}" -b CIMB-TEC:dev
+----
+
+
+At this point, you should wait for feedback. If there are changes to make, add, commit and push again but do not create another PR.
+
+Else, if your changes got accepted and merged into `dev`, delete your feature branch from local and the repo to keep it clean.
+
+[source, powershell]
+----
+git branch -d <branch name>
+git push origin --delete <branch name>
+----
+
+
 
