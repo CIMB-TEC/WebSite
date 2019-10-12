@@ -1,0 +1,66 @@
+﻿= CIMB 
+https://www.cimb.com.mx
+
+
+
+= Contributing
+
+
+IMPORTANT: Use terminal git, not the bloated GUI version. 
+
+The workflow is as follows:
+
+. Pick an Issue
+. Clone the code to local 
+. Create new local issue branch
+. Hack away
+. Commit and push to a new server branch
+. Create pull request
+. (Solve feedback)
+
+If you don't have git, run in Powershell with admin rights:
+
+[source, powershell]
+----
+Set-ExecutionPolicy AllSigned
+----
+
+then
+
+[source, powershell]
+----
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install git hub -y
+----
+
+Clone
+
+[source, powershell]
+----
+git clone https://github.com/CIMB-TEC/WebSite.git
+cd Website
+----
+
+Create new feature branch, the name should be the issue number in the format "GH-{ISSUENUMBER}". If multiple issues are solved on the same branch, separate them with a comma.
+
+[source, powershell]
+----
+git checkout -b GH-{ISSUENUMBER}
+git remote add personal https://github.com/USERNAME/WebSite.git
+----
+
+Begin making changes.  Once finished, add, commit and push changes.
+
+IMPORTANT: The commit message (the string between the quotes) should follow this format:
+[GH-{ISSUE NUMBER}] - {Changes} ] 
+
+[source, powershell]
+----
+git add *
+git commit -m '{COMMIT MESSAGE}'
+# Be sure to replace with your username
+git push --set-upstream personal dev
+----
+
+Create pull request
+
