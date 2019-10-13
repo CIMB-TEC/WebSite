@@ -1,4 +1,14 @@
-﻿= CIMB 
+= CIMB 
+:icons: font
+// Enable fancy admonition icons on GH
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
 https://www.cimb.com.mx
 
 = Contributing
@@ -7,15 +17,16 @@ IMPORTANT: Use terminal git, not the bloated GUI version.
 
 The workflow is as follows:
 
-. Pick an Issue
-. Clone the code to local 
+. Pick an https://github.com/CIMB-TEC/WebSite/issues[Issue]
+. Update (or clone) the local repo
 . Create new local issue branch
 . Hack away
 . Commit and push to a new server branch
 . Create pull request
 . (Solve feedback)
+. Delete local branch
 
-If you don't have git, run in Powershell with admin rights:
+If you don't have git and/or hub, run in Powershell with admin rights:
 
 [source, powershell]
 ----
@@ -30,8 +41,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco install git hub -y
 ----
 
-Clone
-
+. Clone if this is the first time modifying the codebase.
++
 [source, powershell]
 ----
 git clone https://github.com/CIMB-TEC/WebSite.git
@@ -39,52 +50,55 @@ cd Website
 git fetch origin
 git checkout -b dev origin/dev
 ----
-
-Create new feature branch, the name should be the issue number in the format. 
-
-    yourname/feature/issue-tracker-number/short-description
-
-which would translate to:
-
-    Mauville/github/GH-20/readme-init
-
++
+. Create new feature branch
++
 [source, powershell]
 ----
 git checkout -b Mauville/github/GH-20/readme-init
 ----
-
-Begin making changes.  Once finished, add, commit and push changes.
-
++
+The branch name should be composed like follows:
++
+    yourname/place-of-fixing/issue-tracker-number/short-description
++
+. Begin making changes.  Once finished, add, commit and push changes.
++
 IMPORTANT: The commit message (the string between the quotes) should follow this format:
 GH-{ISSUENUMBER} - {Changes}
-
++
 If the commit solves the issue, add "Solve" before the GH-Issue
-
++
 [source, powershell]
 ----
 git add *
 git commit -m '{COMMIT MESSAGE}'
-# Be sure to replace with your username
 ----
-
-Push & create pull request
++
+. Push & create a pull request with necessary info
++
 NOTE: You can get the branch name using `git branch`
++
 [source, powershell]
 ----
 git push --set-upstream origin <branch name>
-hub pull-request -m "Solves #{issue-number} {and Solves {issue-number}}" -m "{Description of changes}" -b CIMB-TEC:dev
+hub pull-request -m "Solves #{issue-number} {and Solves {issue-number} and Solves...}" -m "{Description of changes}" -b CIMB-TEC:dev
 ----
-
-
++
 At this point, you should wait for feedback. If there are changes to make, add, commit and push again but do not create another PR.
-
-Else, if your changes got accepted and merged into `dev`, delete your feature branch from local and the repo to keep it clean.
-
++
+. If your changes got accepted and merged into `dev`, delete your feature branch from local so next time you work you start clean.
++
 [source, powershell]
 ----
+git checkout dev
 git branch -d <branch name>
-git push origin --delete <branch name>
 ----
-
-
++
+. When you are ready to tackle another issue, be sure to get the latest changes before you create a new feature branch from `dev`.
++
+[source, powershell]
+----
+git pull
+----
 
