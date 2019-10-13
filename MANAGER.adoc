@@ -1,0 +1,38 @@
+﻿= Manager
+:icons: font
+:imagedir: imagedir/
+
+Congrats on making it to the project manager position.
+Few things you have to know
+
+* This uses the feature https://stackoverflow.com/a/4258654[branch workflow]
+* More info https://stackoverflow.com/a/4258654[here]
+
+*You need to manage changes via dev branch and merge PRs
+//TODO add pictures of PR accepting and feedbacking
+
+* Once you've merged enough PR's to `dev`, you should be ready to get a new release going. 
+First, create a PR from `dev` to master
+image::pr.png[]
+then, merge the pull request:
+image::merge.png[]
+
+Next, you need to push to the server:
+* Use https://github.com/git-ftp/git-ftp[git ftp]
+
+Download git ftp to your machine
+Add the credentials:
+
+    git config git-ftp.url "ftp://cimb.com.mx/public_html"
+    git config git-ftp.user "FTP_USERNAME"
+    git config git-ftp.password "FTP_PASS"
+
+Sync with server 
+    
+    git ftp catchup
+
+Once you've finished merging all changes from `dev` to `master`, pull and checkout `master` and do
+
+    git ftp push
+
+This will upload the files in an orderly fashion.
