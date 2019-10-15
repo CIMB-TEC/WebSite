@@ -55,17 +55,17 @@ git checkout -b dev origin/dev
 +
 [source, powershell]
 ----
-git checkout -b Mauville/github/GH-20/readme-init
+git checkout -b Mauville/github
 ----
 +
 The branch name should be composed like follows:
 +
-    yourname/place-of-fixing/issue-tracker-number/short-description
+    yourname/main-place-of-fixing
 +
 . Begin making changes.  Once finished, add, commit and push changes.
 +
 IMPORTANT: The commit message (the string between the quotes) should follow this format:
-GH-{ISSUENUMBER} - {Changes}
+{Changes}  GH-{ISSUENUMBER} 
 +
 If the commit solves the issue, add "Solve" before the GH-Issue
 +
