@@ -65,7 +65,7 @@ The branch name should be composed like follows:
 . Begin making changes.  Once finished, add, commit and push changes.
 +
 IMPORTANT: The commit message (the string between the quotes) should follow this format:
-GH-{ISSUENUMBER} - {Changes}
+{Changes}  GH-{ISSUENUMBER} 
 +
 If the commit solves the issue, add "Solve" before the GH-Issue
 +
