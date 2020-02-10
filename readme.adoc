@@ -1,4 +1,4 @@
-= CIMB 
+﻿= CIMB 
 :icons: font
 // Enable fancy admonition icons on GH
 ifdef::env-github[]
@@ -55,12 +55,8 @@ git checkout -b dev origin/dev
 +
 [source, powershell]
 ----
-git checkout -b Mauville/github
+git checkout -b {your-name}/{place-where-issues-will-be-solved}
 ----
-+
-The branch name should be composed like follows:
-+
-    yourname/main-place-of-fixing
 +
 . Begin making changes.  Once finished, add, commit and push changes.
 +
