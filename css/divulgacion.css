@@ -1,0 +1,125 @@
+#proyectos {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.subtitle {
+  font-weight: 700;
+}
+.col-3 {
+  width: 100%;
+  height: 40px;
+    margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.col-7{
+height: 70px !important;
+}
+
+#DisenoWeb .col-7{
+  background-color: #122c47 !important
+}
+#Admas1 .col-7{
+  background-color: #122c47 !important
+}
+#Admas2 .col-7{
+  background-color: #122c47 !important
+}
+#Admas3 .col-7{
+  background-color: #122c47 !important
+}
+#Admas4 .col-7{
+  background-color: #122c47 !important
+}
+#Admas5 .col-7{
+  background-color: #122c47 !important
+}
+#Admas6 .col-7{
+  background-color: #122c47 !important
+}
+#Admas7 .col-7{
+  background-color: #122c47 !important
+}
+#Admas8 .col-7{
+  background-color: #122c47 !important
+}
+
+
+#DomEm1 .col-7{
+  background-color: #122c47 !important
+}
+#DomEm2 .col-7{
+  background-color: #122c47 !important
+}
+#DomEm3 .col-7{
+  background-color: #122c47 !important
+}
+#DomEm4 .col-7{
+  background-color: #122c47 !important
+}
+#DomEm5 .col-7{
+  background-color: #122c47 !important
+}
+
+#ExoDUX1 .col-7{
+  background-color: #122c47 !important
+}
+#ExoDUX2 .col-7{
+  background-color: #122c47 !important
+}
+#ExoDUX3 .col-7{
+  background-color: #122c47 !important
+}
+
+
+#Inter1 .col-7{
+  background-color: #122c47 !important
+}
+
+
+
+.col-7:hover{
+  cursor: pointer;
+}
+.title {
+  text-transform: capitalize;
+  text-shadow: 1px 1px #000000;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: absolute;
+  line-height: 2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.fader {
+  width: 100%;
+  height: 100%;
+   background-color: rgba(0, 0, 0, 0.0) !important;
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+h2{
+    margin-left: 20px;
+}
+
+.info {
+  display: none;
+  padding: 2rem;
+  color: #4a4a4a;
+  text-align: justify;
+}
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+      line-height: 1.4rem;
+    margin-left: 0.5rem;
+  }
+
+    
+} 
