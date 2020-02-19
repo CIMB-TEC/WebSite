@@ -1,0 +1,34 @@
+﻿= Encrypt using SSL
+:imagedir: imagedir/
+
+Or how to get that little green lock on the top bar.
+
+* So. Encryption is a big deal. Google doesn't index us if we are not encrypted.
+* Credentials could be compromised if not encrypted.
+* Clients can be attacked with no encryption.
+
+*Encryption is a big deal.*
+
+We get our certificates from Cloudflare. Accept no other.
+
+I've technically set it up to last for around 15 years but in the case you need to change something for whatever reason...
+there is an account at Cloudflare.com. You can ask the manager for the credentials to that. 
+
+== Doing it all over again
+
+* In short, you need to change the nameservers of the current hoster to the Cloudflare ones and make sure that every address related to the website is proxied through it.
+
+* Also, every single instance of a link should begin with `https://` and not `http://`
+
+. Create an account at CloudFlare
+. Link your domain. There's a wizard on that
+. Make sure that the domain and the `www` entry are proxied on the DNS records
++
+image::img_ENCRYPTION_1.png[]
++
+. Once this is done, change the nameservers at whatever your hosting is.
++
+image::img_ENCRYPTION_2.png[]
++
+. Wait for the magic elves at ICANN to do their magic.
+.PROFIT!!!
