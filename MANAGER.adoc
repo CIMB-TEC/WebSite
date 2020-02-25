@@ -8,13 +8,16 @@ Few things you have to know
 * This uses the feature https://stackoverflow.com/a/4258654[branch workflow]
 * More info https://stackoverflow.com/a/4258654[here]
 
-*You need to manage changes via dev branch and merge PRs
+* You need to manage changes via dev branch and merge PRs
 //TODO add pictures of PR accepting and feedbacking
 
 * Once you've merged enough PR's to `dev`, you should be ready to get a new release going. 
 First, create a PR from `dev` to master
+
 image::pr.png[]
+
 then, merge the pull request:
+
 image::merge.png[]
 
 Next, you need to push to the server:
